@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block corpo %}
+  <ul class="entradas">
+  {% for entrada in entradas %}
+    <li><h2>{{ entrada.titulo }}</h2>{{ entrada.texto|safe }}
+  {% else %}
+    <li><em>Inacreditável. Até agora nenhuma entrada.</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
